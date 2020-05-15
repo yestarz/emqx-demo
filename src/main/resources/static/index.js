@@ -11,12 +11,14 @@ $(document).ready(function () {
         username: username, // 取当前用户的名字
         password: '',
         will:{
+            // will/zhangsan
             topic:`will/${clientId}`,
             payload:"I'm died",
             qos:2,
             retain:false
         },
     };
+    // ws://116.196.118.178:8083/mqtt
     const client = mqtt.connect(websocketUrl, options);
 
     client.on('connect', (e) => {
